@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using PizzaBox.Domain.Abstract;
+using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Client
 {
@@ -13,11 +15,10 @@ namespace PizzaBox.Client
         private static void Run()
         {
             Console.WriteLine("Welcome to Pizza Box");
-            var stores = new List<string>()
+            var stores = new List<AStore>()
             {
-                "Store 001",
-                "Store 002",
-                "Store 003"
+                new NewYorkStore(),
+                new ChicagoStore()
             };
 
             foreach (var item in stores)
